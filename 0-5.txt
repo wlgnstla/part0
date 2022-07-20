@@ -1,0 +1,20 @@
+This is the following diagram of what occurs when a user goes to the single page app version of the notes app.
+
+
+browser->server:HTTP:GET request to the /spa address
+server->browser: HTML code
+browser->server:HTTP:GET request to the /main.css
+server->browser:main.css
+browser->server:HTTP:GET request to the /spa.js 
+server->browser:spa.js
+note over browser:
+Browser runs main.js
+sets up the request to the /data.json
+end note    
+browser->server:HTTP:GET request /data.json
+server->browser:data.json
+
+note over browser:
+Browser handles the event listener
+renders note to be displayed
+end note
