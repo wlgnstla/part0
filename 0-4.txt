@@ -8,17 +8,19 @@ browser->server:HTTP:GET request to /main.css
 server->browser: main.css
 browser->server:HTTP:GET request to /main.js
 server->browser: main.js
+
 note over browser:
-browser starts executing main.js
-that requests JSON data from 
-the server
+    browser starts executing main.js
+    that requests JSON data from 
+    the server
 end note 
+
 browser->server:HTTP:GET JSON data please!
 server->browser: JSON data 
 
 note over browser:
-browser handles the event listener
-that renders the notes to be displayed
+    browser handles the event listener
+    that renders the notes to be displayed
 end note
 
 

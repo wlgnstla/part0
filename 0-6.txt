@@ -1,0 +1,14 @@
+The following is a diagram depicting when a user creates a new note in the single page version of the app.
+
+note over browser:
+    js has even handler if new note is created
+    note is converted into an object
+    that object gets run by SendToServer() function
+    which says if the POST request was successful,
+    hence, our JSONified note makes it over to the /new_note/spa
+    it will console.log("message created")
+end note over 
+
+
+browser->server:HTTP:POST request to /new_note_spa address
+server->browser:{"message":"note created"} 

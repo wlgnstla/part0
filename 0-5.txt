@@ -7,14 +7,16 @@ browser->server:HTTP:GET request to the /main.css
 server->browser:main.css
 browser->server:HTTP:GET request to the /spa.js 
 server->browser:spa.js
+
 note over browser:
-Browser runs main.js
-sets up the request to the /data.json
+    Browser runs main.js
+    sets up the request to the /data.json
 end note    
+
 browser->server:HTTP:GET request /data.json
 server->browser:data.json
 
 note over browser:
-Browser handles the event listener
-renders note to be displayed
+    Browser handles the event listener
+    renders note to be displayed
 end note
