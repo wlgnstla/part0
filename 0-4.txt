@@ -1,0 +1,26 @@
+The following is a diagram of what occurs when a user creates a new note on the page and clicks the submit button. 
+
+browser->server:HTTP:POST request to the /new_note address
+server->browser:Responds with Status Code 302, a "URL Direct", asking browser to NEW HTTP request to the address given in Response: /notes
+browser->server:HTTP:GET request to /notes
+server->browser:responds with HTML file
+browser->server:HTTP:GET request to /main.css
+server->browser: main.css
+browser->server:HTTP:GET request to /main.js
+server->browser: main.js
+note over browser:
+browser starts executing main.js
+that requests JSON data from 
+the server
+end note 
+browser->server:HTTP:GET JSON data please!
+server->browser: JSON data 
+
+note over browser:
+browser handles the event listener
+that renders the notes to be displayed
+end note
+
+
+
+
